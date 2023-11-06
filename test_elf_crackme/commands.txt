@@ -1,0 +1,22 @@
+make
+./test_elf
+file test_elf
+file Makefile 
+file test_elf.c 
+hexedit test_elf
+man readelf 
+readelf -h test_elf
+man readelf
+readelf -l test_elf
+man readelf
+readelf -S test_elf
+man objdump 
+objdump -d -M intel test_elf > objdump_test_elf
+vim objdump_test_elf 
+hexedit test_elf
+cp test_elf test_elf_1
+hexedit test_elf_1
+./test_elf_1 
+./test_elf
+objdump -d -M intel test_elf_1 > result
+vim result
